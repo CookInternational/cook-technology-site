@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cook Technology Services | Web &amp; IT Solutions</title>
+  <title>Cook Technology Services | Technology Solutions at the Speed of Business</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="Cook Technology Services delivers corporate web design, IT services, and casino technology solutions at the speed of business." />
-  <link rel="canonical" href="https://cook-technology.cook-international.com/" />
+  <meta
+    name="description"
+    content="Cook Technology Services delivers high-speed web design and IT solutions for corporate clients, including fully functional, SEO-optimized business websites."
+  />
   <style>
     :root {
-      --bg: #020617;
-      --bg-alt: #020617;
-      --fg: #e5e7eb;
-      --accent: #f97316;
-      --accent-soft: #facc15;
-      --card-bg: rgba(15, 23, 42, 0.96);
-      --border-subtle: rgba(148, 163, 184, 0.45);
-      --muted: #9ca3af;
-      --accent-grad: linear-gradient(135deg, #facc15, #f97316);
+      --bg-dark: #020617;
+      --bg-panel: rgba(15, 23, 42, 0.98);
+      --accent-gold: #facc15;
+      --accent-orange: #f97316;
+      --accent-indigo: #6366f1;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.4);
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-      color: var(--fg);
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top, #111827 0, #020617 52%, #000 100%);
     }
 
     a {
@@ -41,232 +43,237 @@
       text-decoration: underline;
     }
 
-    .page-shell {
+    .cts-shell {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 24px 20px 64px;
+      padding: 0 20px;
     }
 
     /* HEADER / NAV */
-    header {
+    .cts-header {
       position: sticky;
       top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.96));
-      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.9),
+        transparent
+      );
+      border-bottom: 1px solid rgba(15, 23, 42, 0.95);
     }
 
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 10px 20px;
+    .cts-nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 12px 0;
       gap: 16px;
     }
 
-    .nav-brand {
+    .cts-brand {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .nav-brand img {
-      height: 40px;
-      width: auto;
-      border-radius: 999px;
-      box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
-    }
-
-    .nav-brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .nav-brand-title {
-      font-size: 16px;
+      text-decoration: none;
+      color: var(--text-main);
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
+      font-size: 12px;
     }
 
-    .nav-brand-sub {
-      font-size: 11px;
-      color: var(--muted);
+    .cts-brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(15, 23, 42, 0.9);
     }
 
-    .nav-links {
+    .cts-nav-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      align-items: center;
+      gap: 16px;
       font-size: 13px;
     }
 
-    .nav-links a {
-      color: var(--fg);
+    .cts-nav-links a {
+      color: #e5e7eb;
       text-decoration: none;
       padding: 6px 10px;
       border-radius: 999px;
       border: 1px solid transparent;
-      opacity: 0.88;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .nav-links a:hover {
-      opacity: 1;
+    .cts-nav-links a:hover {
       border-color: rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
       text-decoration: none;
-      background: rgba(15, 23, 42, 0.85);
     }
 
-    .nav-links a.cta-nav {
-      background: var(--accent-grad);
+    .cts-nav-links .cts-nav-cta {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
       color: #111827;
-      border-color: rgba(15, 23, 42, 0.95);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9), 0 0 24px rgba(251, 191, 36, 0.35);
+      border-color: rgba(15, 23, 42, 1);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.95);
     }
 
-    .nav-links a.cta-nav:hover {
+    .cts-nav-links .cts-nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.95), 0 0 32px rgba(251, 191, 36, 0.45);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 1);
     }
 
     /* HERO */
-    .hero {
-      padding-top: 40px;
-      padding-bottom: 40px;
+    .cts-hero {
+      padding: 40px 0 56px;
+    }
+
+    .cts-hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 32px;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
       align-items: center;
     }
 
-    .hero-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 11px;
-      color: #c4b5fd;
-      margin-bottom: 10px;
+    .cts-hero-left {
+      max-width: 640px;
     }
 
-    .hero h1 {
-      font-size: clamp(32px, 3.2vw, 40px);
-      margin: 0 0 10px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-tagline {
-      font-size: 15px;
-      margin-bottom: 16px;
-      color: #e5e7eb;
-    }
-
-    .hero-subcopy {
-      font-size: 14px;
-      color: #d1d5db;
-      max-width: 520px;
-      line-height: 1.6;
-    }
-
-    .hero-price-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-      margin: 20px 0 18px;
-    }
-
-    .hero-price-main {
-      font-size: 30px;
-      font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 16px;
-      background: var(--accent-grad);
-      color: #111827;
-      box-shadow:
-        0 18px 45px rgba(15, 23, 42, 0.85),
-        0 0 40px rgba(234, 179, 8, 0.3);
-      white-space: nowrap;
-    }
-
-    .hero-price-copy {
-      font-size: 13px;
-      color: #e5e7eb;
-      max-width: 360px;
-    }
-
-    .hero-price-copy strong {
-      color: #fef3c7;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .cts-hero-logo {
       margin-bottom: 12px;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    .cts-hero-logo img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      display: block;
+      filter: drop-shadow(0 18px 40px rgba(15, 23, 42, 0.95));
+    }
+
+    .cts-eyebrow {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      color: #c4b5fd;
+      margin: 8px 0 8px;
+    }
+
+    .cts-hero-left h1 {
+      font-size: clamp(32px, 3.2vw, 40px);
+      letter-spacing: 0.02em;
+      margin: 0 0 10px;
+    }
+
+    .cts-hero-subtitle {
+      font-size: 16px;
+      margin: 0 0 12px;
+      color: #e5e7eb;
+    }
+
+    .cts-hero-copy {
+      margin: 0 0 14px;
+      color: #d1d5db;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .cts-price-pill {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 10px 20px;
+      gap: 10px;
+      margin: 10px 0 12px;
+      padding: 10px 18px;
       border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      border: 1px solid transparent;
-      text-decoration: none;
-      cursor: pointer;
-      transition:
-        transform 0.12s ease,
-        box-shadow 0.12s ease,
-        background 0.12s ease,
-        border-color 0.12s ease;
+      background: radial-gradient(circle at top left, var(--accent-gold), var(--accent-orange));
+      color: #111827;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.85),
+        0 0 40px rgba(234, 179, 8, 0.25);
       white-space: nowrap;
     }
 
-    .btn-primary {
-      background: var(--accent-grad);
+    .cts-price-pill span {
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: none;
       color: #111827;
-      border-color: rgba(15, 23, 42, 0.95);
+    }
+
+    .cts-hero-list {
+      margin: 6px 0 16px;
+      padding-left: 18px;
+      font-size: 13px;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    .cts-hero-list li + li {
+      margin-top: 4px;
+    }
+
+    .cts-hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .cts-cta-primary,
+    .cts-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+    }
+
+    .cts-cta-primary {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #111827;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9), 0 0 24px rgba(251, 191, 36, 0.35);
     }
 
-    .btn-primary:hover {
+    .cts-cta-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 14px 36px rgba(15, 23, 42, 0.95), 0 0 32px rgba(251, 191, 36, 0.45);
       text-decoration: none;
     }
 
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.85);
+    .cts-cta-secondary {
+      background: rgba(15, 23, 42, 0.8);
       color: #e5e7eb;
-      border-color: rgba(148, 163, 184, 0.6);
+      border-color: rgba(148, 163, 184, 0.55);
     }
 
-    .btn-secondary:hover {
-      background: rgba(15, 23, 42, 0.98);
+    .cts-cta-secondary:hover {
+      background: rgba(15, 23, 42, 1);
       transform: translateY(-1px);
       text-decoration: none;
     }
 
-    .hero-disclaimer {
-      font-size: 11px;
-      line-height: 1.5;
-      color: #9ca3af;
-      max-width: 560px;
-    }
-
-    .hero-media {
+    .cts-hero-right {
       display: grid;
       grid-template-columns: 1fr;
       gap: 12px;
     }
 
-    .media-card {
+    .cts-hero-card {
       position: relative;
       overflow: hidden;
       border-radius: 18px;
@@ -278,7 +285,7 @@
       min-height: 120px;
     }
 
-    .media-card img {
+    .cts-hero-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -288,140 +295,172 @@
       transition: transform 0.4s ease, opacity 0.4s ease;
     }
 
-    .media-card:hover img {
+    .cts-hero-card:hover img {
       transform: scale(1.05);
       opacity: 1;
     }
 
-    .media-pill {
+    .cts-hero-card-label {
       position: absolute;
       left: 12px;
       bottom: 12px;
-      padding: 6px 10px;
+      padding: 6px 11px;
       border-radius: 999px;
       font-size: 11px;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.88);
       border: 1px solid rgba(148, 163, 184, 0.7);
       color: #e5e7eb;
       backdrop-filter: blur(8px);
     }
 
-    /* SECTION WRAPPERS */
-    section {
-      margin-bottom: 40px;
+    /* GENERIC SECTIONS */
+    .cts-section {
+      padding: 10px 0 40px;
     }
 
-    .section-title {
+    .cts-section h2 {
       font-size: 22px;
       margin: 0 0 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 20px;
+    .cts-section-lead {
+      margin: 0 0 18px;
+      font-size: 14px;
+      color: #d1d5db;
       max-width: 640px;
     }
 
-    /* SERVICES / INFO BOXES */
-    .grid-3 {
+    .cts-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      gap: 20px;
     }
 
-    .card {
+    .cts-card {
       border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.35), rgba(15, 23, 42, 0.98));
-      padding: 20px 20px 18px;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.35), var(--bg-panel));
+      padding: 18px 18px 16px;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
-    }
-
-    .card h2 {
-      font-size: 18px;
-      margin: 0 0 8px;
-    }
-
-    .card p {
       font-size: 14px;
       line-height: 1.6;
-      margin: 0 0 8px;
       color: #e5e7eb;
     }
 
-    .card ul {
+    .cts-card h3 {
+      font-size: 17px;
+      margin: 0 0 8px;
+    }
+
+    .cts-card p {
+      margin: 0 0 8px;
+    }
+
+    .cts-card ul {
       margin: 0;
       padding-left: 18px;
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 13px;
       color: #d1d5db;
     }
 
-    .card ul li + li {
+    .cts-card ul li + li {
       margin-top: 4px;
     }
 
-    .card-note {
+    .cts-small {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* EXAMPLE SITES */
+    .cts-example-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .cts-example-card {
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 1));
+      padding: 14px 16px 12px;
+      font-size: 13px;
+      line-height: 1.5;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.9);
+    }
+
+    .cts-example-card h3 {
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+
+    .cts-example-card span {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .cts-example-card a {
       font-size: 12px;
-      margin-top: 8px;
-      color: #fbbf24;
+      color: #bfdbfe;
+      word-break: break-all;
     }
 
-    /* PORTFOLIO */
-    .portfolio-list {
-      margin: 0;
-      padding-left: 18px;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #d1d5db;
-    }
-
-    .portfolio-list li + li {
-      margin-top: 4px;
-    }
-
-    /* CONTACT / FOOTER */
-    .contact-card {
+    /* CONTACT */
+    .cts-contact-card {
       border-radius: 18px;
       border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.96);
+      background: radial-gradient(circle at top right, rgba(234, 179, 8, 0.16), var(--bg-panel));
       padding: 18px 18px 16px;
-      font-size: 13px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
+      font-size: 14px;
       line-height: 1.7;
+    }
+
+    .cts-contact-card h2 {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+
+    .cts-contact-card p {
+      margin: 0 0 6px;
+    }
+
+    .cts-contact-meta {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .cts-contact-meta strong {
       color: #e5e7eb;
     }
 
-    .contact-grid {
+    .cts-contact-social {
+      margin-top: 8px;
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      align-items: flex-start;
-      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
     }
 
-    .contact-main,
-    .contact-extra {
-      min-width: 230px;
-      max-width: 420px;
+    .cts-contact-social-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
     }
 
-    .contact-main strong {
-      font-size: 14px;
-    }
-
-    .contact-row {
-      margin-top: 4px;
-    }
-
-    .contact-row span.label {
-      display: inline-block;
-      min-width: 1.6em;
-    }
-
-    .contact-ig-link {
+    .cts-contact-social a {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -433,16 +472,15 @@
       font-weight: 500;
       text-decoration: none;
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.7);
-      margin-top: 4px;
     }
 
-    .contact-ig-link:hover {
-      text-decoration: none;
+    .cts-contact-social a:hover {
       transform: translateY(-1px);
+      text-decoration: none;
       box-shadow: 0 10px 22px rgba(15, 23, 42, 0.85);
     }
 
-    .contact-ig-pill-icon {
+    .cts-contact-social .icon-dot {
       width: 18px;
       height: 18px;
       border-radius: 6px;
@@ -453,7 +491,7 @@
       position: relative;
     }
 
-    .contact-ig-pill-icon::before {
+    .cts-contact-social .icon-dot::before {
       content: "";
       width: 9px;
       height: 9px;
@@ -461,7 +499,7 @@
       border: 1px solid rgba(249, 250, 251, 0.9);
     }
 
-    .contact-ig-pill-icon::after {
+    .cts-contact-social .icon-dot::after {
       content: "";
       width: 3px;
       height: 3px;
@@ -472,323 +510,387 @@
       right: 3px;
     }
 
-    footer {
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(15, 23, 42, 0.9);
+    /* FOOTER */
+    .cts-footer {
+      text-align: center;
+      padding: 20px 20px 26px;
       font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      text-align: center;
-      color: rgba(156, 163, 175, 0.9);
+      color: var(--text-muted);
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      margin-top: 16px;
     }
 
     /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .hero {
+    @media (max-width: 960px) {
+      .cts-hero-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .hero-media {
+      .cts-hero-right {
         order: -1;
       }
 
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
+      .cts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .hero-price-row {
+      .cts-example-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .cts-nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .hero-price-main {
-        font-size: 26px;
+      .cts-nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .cts-hero {
+        padding-top: 28px;
+      }
+
+      .cts-hero-logo {
+        text-align: left;
+      }
+
+      .cts-hero-logo img {
+        max-width: 220px;
+      }
+
+      .cts-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cts-example-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    @media (max-width: 640px) {
-      .page-shell {
-        padding: 24px 16px 52px;
+    @media (max-width: 480px) {
+      .cts-shell {
+        padding: 0 16px;
       }
 
-      .nav-inner {
-        padding-inline: 16px;
-      }
-
-      .nav-links {
-        justify-content: flex-end;
+      .cts-price-pill {
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: normal;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav-inner">
-      <a href="#top" class="nav-brand">
-        <img src="https://www.cook-international.com/s/CTSInstaPhoto09.png"
-             alt="Cook Technology Services logo" loading="lazy" />
-        <div class="nav-brand-text">
-          <div class="nav-brand-title">Cook Technology Services</div>
-          <div class="nav-brand-sub">Web Design · IT Services · Casino Technology</div>
-        </div>
-      </a>
-      <nav class="nav-links">
-        <a href="#top">Home</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="https://www.cook-international.com/cook-technology-services"
-           target="_blank" rel="noopener">Casino Technology Solutions</a>
-        <a href="#contact" class="cta-nav">Contact</a>
-      </nav>
+  <!-- HEADER -->
+  <header class="cts-header">
+    <div class="cts-shell">
+      <div class="cts-nav">
+        <a href="/" class="cts-brand">
+          <img
+            src="https://www.cook-international.com/s/CTSInstaPhoto09.png"
+            alt="Cook Technology Services logo"
+          />
+          <span>Cook Technology Services</span>
+        </a>
+        <nav class="cts-nav-links">
+          <a href="#services">Services</a>
+          <a href="#portfolio">Example Sites</a>
+          <a
+            href="https://www.cook-international.com/cook-technology-services"
+            class="cts-nav-cta"
+            target="_blank"
+            rel="noopener"
+          >
+            Casino Technology Solutions
+          </a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main id="top" class="page-shell">
+  <main>
     <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-eyebrow">Technology Solutions at the Speed of Business</div>
-        <h1>The World’s Leading Corporate Solution for Web Design &amp; IT Services</h1>
-        <p class="hero-tagline">
-          From first mockup to fully deployed infrastructure, Cook Technology Services builds
-          production-grade websites and IT systems that keep up with your business.
-        </p>
-        <p class="hero-subcopy">
-          We specialize in <strong>corporate web design</strong>, <strong>SEO &amp; search
-          indexing</strong>, and <strong>custom IT solutions</strong> — including the same
-          casino technology stack that powers Cook International Casino.
-        </p>
+    <section class="cts-hero">
+      <div class="cts-shell cts-hero-grid">
+        <div class="cts-hero-left">
+          <div class="cts-hero-logo">
+            <img
+              src="https://www.cook-international.com/s/CTSInstaPhoto09.png"
+              alt="Cook Technology Services logo"
+              loading="lazy"
+            />
+          </div>
 
-        <div class="hero-price-row">
-          <div class="hero-price-main">$1,200</div>
-          <div class="hero-price-copy">
-            <strong>Basic corporate / business website design</strong><br />
-            Fully responsive, SEO-ready, and connected to Google Search Console so your site can be
-            indexed properly and discovered by your customers.
+          <p class="cts-eyebrow">Web Design • Corporate Sites • IT Services</p>
+
+          <h1>Technology Solutions at the Speed of Business</h1>
+          <p class="cts-hero-subtitle">
+            The World's Leading Corporate Solution for Web Design &amp; IT Services.
+          </p>
+          <p class="cts-hero-copy">
+            From first mockup to fully deployed production, we deliver modern, secure,
+            SEO-optimized websites and technology workflows for companies that can’t afford
+            to move slowly.
+          </p>
+
+          <div class="cts-price-pill">
+            $1,200
+            <span>Basic corporate / business website design</span>
+          </div>
+
+          <ul class="cts-hero-list">
+            <li>Fully functional, production-ready websites.</li>
+            <li>Fully indexable and wired into Google Search Console.</li>
+            <li>On-page SEO best practices baked in from day one.</li>
+            <li>Responsive design across desktop, tablet, and mobile.</li>
+            <li>Optional automations, analytics, and IT integrations.</li>
+          </ul>
+
+          <div class="cts-hero-cta-row">
+            <a
+              href="mailto:cts@cook-international.com?subject=Project%20Inquiry%20-%20Cook%20Technology%20Services"
+              class="cts-cta-primary"
+            >
+              Start a Project
+            </a>
+            <a href="#portfolio" class="cts-cta-secondary">See Example Websites</a>
           </div>
         </div>
 
-        <div class="hero-ctas">
-          <a class="btn-primary"
-             href="mailto:cts@cook-international.com?subject=Website%20%2F%20IT%20Project%20Inquiry">
-            Schedule a Consultation
-          </a>
-          <a class="btn-secondary" href="#portfolio">
-            See Our Work &nbsp;→
-          </a>
+        <div class="cts-hero-right">
+          <div class="cts-hero-card">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c0/b7/3f/caption.jpg?w=1400&h=1400&s=1"
+              alt="Chicago skyline representing corporate headquarters"
+              loading="lazy"
+            />
+            <div class="cts-hero-card-label">Chicago &amp; Corporate</div>
+          </div>
+          <div class="cts-hero-card">
+            <img
+              src="https://rms.koenig-solutions.com/Sync_data/CCE_Logo/2894-artificialintelligence33825071280.jpgL.jpg"
+              alt="Artificial intelligence and IT infrastructure"
+              loading="lazy"
+            />
+            <div class="cts-hero-card-label">IT &amp; Automation</div>
+          </div>
+          <div class="cts-hero-card">
+            <img
+              src="https://www.savannahtech.edu/wp-content/uploads/2018/07/Information-Technology-Courses-Webpage-Image-2.png"
+              alt="Information technology team collaborating"
+              loading="lazy"
+            />
+            <div class="cts-hero-card-label">Managed Services</div>
+          </div>
+          <div class="cts-hero-card">
+            <img
+              src="https://www.smartosc.com/wp-content/uploads/2024/01/web-design-services-01-e1704881772232.png"
+              alt="Modern web design layouts and UI concepts"
+              loading="lazy"
+            />
+            <div class="cts-hero-card-label">Web Design Studio</div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <p class="hero-disclaimer">
-          Fully functional, indexable websites with clean code, analytics-ready structure, and
-          performance-focused builds. DNS, hosting, and deployment support included as part of the
-          setup. Ongoing technical support available as an add-on.
+    <!-- SERVICES -->
+    <section id="services" class="cts-section">
+      <div class="cts-shell">
+        <h2>Core Services</h2>
+        <p class="cts-section-lead">
+          We specialize in fast, reliable, and highly presentable technology deployments for
+          operators who need real business outcomes — not just another template.
         </p>
-      </div>
 
-      <div class="hero-media">
-        <div class="media-card">
-          <img
-            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c0/b7/3f/caption.jpg?w=1400&h=1400&s=1"
-            alt="Chicago skyline representing corporate headquarters" loading="lazy" />
-          <div class="media-pill">Chicago Headquarters · Global Reach</div>
-        </div>
-        <div class="media-card">
-          <img
-            src="https://rms.koenig-solutions.com/Sync_data/CCE_Logo/2894-artificialintelligence33825071280.jpgL.jpg"
-            alt="Information technology and AI infrastructure" loading="lazy" />
-          <div class="media-pill">IT &amp; Infrastructure</div>
-        </div>
-        <div class="media-card">
-          <img
-            src="https://www.smartosc.com/wp-content/uploads/2024/01/web-design-services-01-e1704881772232.png"
-            alt="Modern web design concept" loading="lazy" />
-          <div class="media-pill">Corporate Web Design</div>
-        </div>
-      </div>
-    </section>
+        <div class="cts-grid">
+          <article class="cts-card">
+            <h3>Corporate Web Design</h3>
+            <p>
+              We design and build corporate sites that look expensive, load fast, and make it
+              easy for customers, investors, and partners to understand what you do.
+            </p>
+            <ul>
+              <li>Custom-branded, mobile-first layouts.</li>
+              <li>Clear navigation and conversion-focused copy.</li>
+              <li>Blog / news, landing pages, and lead forms.</li>
+              <li>Connected to Google Search Console &amp; Analytics.</li>
+            </ul>
+            <p class="cts-small">
+              Typical basic builds start at <strong>$1,200</strong> and scale based on pages,
+              integrations, and content requirements.
+            </p>
+          </article>
 
-    <!-- SERVICES / INFO BOXES -->
-    <section id="services">
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-subtitle">
-        Cook Technology Services combines design, engineering, and infrastructure into one unified
-        team. Whether you’re launching a corporate site, upgrading legacy systems, or standing up
-        a full casino platform, we build technology that’s designed to last.
-      </p>
+          <article class="cts-card">
+            <h3>IT &amp; Automation</h3>
+            <p>
+              Behind the scenes, we wire your tools together so systems talk to each other and
+              your team gets real-time visibility instead of spreadsheets and guesswork.
+            </p>
+            <ul>
+              <li>Process mapping and platform selection.</li>
+              <li>Automated reporting and lightweight scripting.</li>
+              <li>CRM, email, and back-office workflow integration.</li>
+              <li>Secure, audit-friendly configuration.</li>
+            </ul>
+            <p class="cts-small">
+              We focus on practical, business-grade automation — no hype, just clean execution.
+            </p>
+          </article>
 
-      <div class="grid-3">
-        <article class="card">
-          <h2>Corporate Web Design &amp; Branding</h2>
-          <p>
-            Production-ready websites for businesses that need to look legitimate on Day One and
-            scale smoothly as they grow.
-          </p>
-          <ul>
-            <li>Basic corporate / business sites starting at <strong>$1,200</strong>.</li>
-            <li>Responsive layouts tuned for desktop, tablet, and mobile.</li>
-            <li>Clean information architecture and on-brand visual systems.</li>
-            <li>Analytics-ready structure for Google Analytics &amp; Tag Manager.</li>
-          </ul>
-          <p class="card-note">
-            Fully indexable, SEO-focused builds — no “pretty but fragile” templates.
-          </p>
-        </article>
-
-        <article class="card">
-          <h2>Search, SEO &amp; Technical Setup</h2>
-          <p>
-            We don’t just ship pages — we make sure they’re discoverable, fast, and wired into the
-            rest of your technology stack.
-          </p>
-          <ul>
-            <li>Google Search Console configuration and sitemap submission.</li>
-            <li>On-page SEO structure (titles, descriptions, headings).</li>
-            <li>Performance-focused builds to help with Core Web Vitals.</li>
-            <li>DNS, SSL, and custom domain guidance (including subdomains).</li>
-          </ul>
-          <p class="card-note">
-            Your site launches with the plumbing already in place for marketing and growth.
-          </p>
-        </article>
-
-        <article class="card">
-          <h2>IT &amp; Casino Technology Solutions</h2>
-          <p>
-            For teams that need more than a marketing site, we design and support systems with real
-            operational complexity.
-          </p>
-          <ul>
-            <li>Custom IT workflows, automation, and data integrations.</li>
-            <li>Back-office tooling, reporting, and dashboard builds.</li>
-            <li>
-              Direct access to the
-              <a href="https://www.cook-international.com/cook-technology-services"
-                 target="_blank" rel="noopener">
-                Cook International Casino platform licensing stack
+          <article class="cts-card">
+            <h3>Casino Technology Solutions</h3>
+            <p>
+              For licensed operators, Cook Technology Services can license the same casino
+              platform that powers <strong>Cook International Casino</strong>, including VIP
+              experiences, bonus wheels, and shared-wallet flows.
+            </p>
+            <ul>
+              <li>Ownership-first licensing structure.</li>
+              <li>High-end VIP lounge presentation layer.</li>
+              <li>Shared wallet across table games &amp; promos.</li>
+              <li>Documentation and onboarding support.</li>
+            </ul>
+            <p class="cts-small">
+              Casino technology details live at our dedicated page:
+              <a
+                href="https://www.cook-international.com/cook-technology-services"
+                target="_blank"
+                rel="noopener"
+              >
+                cook-international.com/cook-technology-services
               </a>.
-            </li>
-            <li>Ongoing technical support and advisory as your needs evolve.</li>
-          </ul>
-          <p class="card-note">
-            The same engineering discipline used for regulated gaming applied to corporate IT.
-          </p>
-        </article>
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO / SAMPLE WORK -->
-    <section id="portfolio">
-      <h2 class="section-title">Selected Client &amp; In-House Projects</h2>
-      <p class="section-subtitle">
-        A sample of sites and experiences built on top of the same principles we’ll apply to your
-        project: clear messaging, reliable infrastructure, and a clean path to growth.
-      </p>
+    <!-- EXAMPLE SITES -->
+    <section id="portfolio" class="cts-section">
+      <div class="cts-shell">
+        <h2>Example Websites</h2>
+        <p class="cts-section-lead">
+          A sample of live projects and house-owned properties that show the range of corporate,
+          ministry, and entertainment work Cook Technology Services can deliver.
+        </p>
 
-      <ul class="portfolio-list">
-        <li>
-          <strong>QuickHire™</strong> – modern hiring platform<br />
-          <a href="https://www.quickhire.agency" target="_blank" rel="noopener">
-            www.quickhire.agency
-          </a>
-        </li>
-        <li>
-          <strong>The Holy Bible Online</strong> – scripture-first reading experience<br />
-          <a href="https://www.the-holy-bible.online" target="_blank" rel="noopener">
-            www.the-holy-bible.online
-          </a>
-        </li>
-        <li>
-          <strong>Living Word Bibles</strong> – premium digital Bible storefront<br />
-          <a href="https://www.livingwordbibles.com" target="_blank" rel="noopener">
-            www.livingwordbibles.com
-          </a>
-        </li>
-        <li>
-          <strong>Cook International Casino</strong> – full casino front-end &amp; tech stack<br />
-          <a href="https://www.cook-international.com" target="_blank" rel="noopener">
-            www.cook-international.com
-          </a>
-        </li>
-        <li>
-          <strong>Cook Electric</strong> – trades &amp; services web presence<br />
-          <a href="https://www.cook-electric.com" target="_blank" rel="noopener">
-            www.cook-electric.com
-          </a>
-        </li>
-        <li>
-          <strong>DeMotte U-Lock</strong> – self-storage presence (DeMotte, IN)<br />
-          <a href="https://www.demottestorage.com" target="_blank" rel="noopener">
-            www.demottestorage.com
-          </a>
-        </li>
-        <li>
-          <strong>Illuminaughty</strong> – creative / lifestyle brand site<br />
-          <a href="https://illuminaughty.com/" target="_blank" rel="noopener">
-            https://illuminaughty.com/
-          </a>
-        </li>
-      </ul>
+        <div class="cts-example-grid">
+          <article class="cts-example-card">
+            <span>Staffing &amp; Recruiting</span>
+            <h3>QuickHire™</h3>
+            <p>Modern staffing platform with clear funnels for candidates and employers.</p>
+            <a href="https://www.quickhire.agency" target="_blank" rel="noopener">
+              www.quickhire.agency
+            </a>
+          </article>
+
+          <article class="cts-example-card">
+            <span>Scripture Platform</span>
+            <h3>The Holy Bible Online</h3>
+            <p>Clean, readable online Bible experience with verse-level navigation.</p>
+            <a href="https://www.the-holy-bible.online" target="_blank" rel="noopener">
+              www.the-holy-bible.online
+            </a>
+          </article>
+
+          <article class="cts-example-card">
+            <span>Publishing &amp; Apps</span>
+            <h3>Living Word Bibles</h3>
+            <p>Digital Bible publishing brand with apps, widgets, and custom tooling.</p>
+            <a href="https://www.livingwordbibles.com" target="_blank" rel="noopener">
+              www.livingwordbibles.com
+            </a>
+          </article>
+
+          <article class="cts-example-card">
+            <span>Gaming &amp; Entertainment</span>
+            <h3>Cook International Casino</h3>
+            <p>High-roller–oriented online casino with VIP lounge and rewards.</p>
+            <a href="https://www.cook-international.com" target="_blank" rel="noopener">
+              www.cook-international.com
+            </a>
+          </article>
+
+          <article class="cts-example-card">
+            <span>Trades &amp; Services</span>
+            <h3>Cook Electric</h3>
+            <p>Service-forward site for an electrical contractor with clear calls to action.</p>
+            <a href="https://www.cook-electric.com" target="_blank" rel="noopener">
+              www.cook-electric.com
+            </a>
+          </article>
+
+          <article class="cts-example-card">
+            <span>Self Storage</span>
+            <h3>DeMotte U-Lock Self Storage</h3>
+            <p>Straightforward, local-focused storage facility presence.</p>
+            <a href="https://www.demottestorage.com" target="_blank" rel="noopener">
+              www.demottestorage.com
+            </a>
+          </article>
+
+          <article class="cts-example-card">
+            <span>Premium Entertainment</span>
+            <h3>Illuminaughty</h3>
+            <p>Bold, entertainment-focused brand experience.</p>
+            <a href="https://illuminaughty.com" target="_blank" rel="noopener">
+              illuminaughty.com
+            </a>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="section-title">Contact &amp; Next Steps</h2>
-      <p class="section-subtitle">
-        Send a short email with your project scope, current site (if you have one), and your ideal
-        launch date. We’ll follow up with concrete next steps, timelines, and pricing options.
-      </p>
+    <section id="contact" class="cts-section">
+      <div class="cts-shell">
+        <div class="cts-contact-card">
+          <h2>Contact Cook Technology Services</h2>
+          <p>
+            Ready to scope a project, migrate an existing site, or talk through a more complex
+            technology build? Reach out with a short description of your business and timeline.
+          </p>
 
-      <div class="contact-card">
-        <div class="contact-grid">
-          <div class="contact-main">
-            <strong>Cook Technology Services</strong><br />
-            John Hancock Center<br />
-            875 N. Michigan Ave., 41st Floor<br />
-            Chicago, IL 60611
-            <div class="contact-row">
-              <span class="label">🌐</span>
-              <a href="https://cook-technology.cook-international.com" target="_blank" rel="noopener">
-                https://cook-technology.cook-international.com
-              </a>
-            </div>
-            <div class="contact-row">
-              <span class="label">📧</span>
-              <a href="mailto:cts@cook-international.com">cts@cook-international.com</a>
-            </div>
-            <div class="contact-row">
-              <span class="label">📱</span>
-              <a href="tel:+19733781350">+1 (973) 378-1350</a>
-            </div>
-          </div>
+          <p class="cts-contact-meta">
+            <strong>📧 Email:</strong>
+            <a href="mailto:cts@cook-international.com">cts@cook-international.com</a>
+            <br />
+            <strong>🌐 Website:</strong>
+            <a href="https://cook-technology.cook-international.com">
+              cook-technology.cook-international.com
+            </a>
+            <br />
+            <strong>📍 Mailing:</strong> Cook Technology Services<br />
+            John Hancock Center, 875 N. Michigan Ave., 41st Floor, Chicago, IL 60611
+          </p>
 
-          <div class="contact-extra">
-            <div class="contact-row">
-              <span class="label">📣</span>
-              Stay connected with project highlights, behind-the-scenes builds, and new launches:
-            </div>
-            <a class="contact-ig-link"
-               href="https://www.instagram.com/cooktechnologyservices"
-               target="_blank" rel="noopener">
-              <span class="contact-ig-pill-icon" aria-hidden="true"></span>
+          <div class="cts-contact-social">
+            <span class="cts-contact-social-label">Follow Us on Social Media</span>
+            <a
+              href="https://www.instagram.com/cooktechnologyservices"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="icon-dot" aria-hidden="true"></span>
               <span>@cooktechnologyservices</span>
             </a>
-            <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
-              For casino operators and regulated markets, see our dedicated Casino Technology
-              Solutions page:
-              <a href="https://www.cook-international.com/cook-technology-services"
-                 target="_blank" rel="noopener">
-                https://www.cook-international.com/cook-technology-services
-              </a>.
-            </p>
           </div>
         </div>
       </div>
-
-      <footer>
-        Powered by Cook Technology Services. Copyright © 2025. All Rights Reserved.
-      </footer>
     </section>
   </main>
+
+  <footer class="cts-footer">
+    Cook Technology Services · A division of Cook International · © 2025 All Rights Reserved.
+  </footer>
 </body>
 </html>
